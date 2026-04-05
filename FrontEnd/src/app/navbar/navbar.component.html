@@ -1,0 +1,293 @@
+<div class=" container-fluid HomeNav">
+  <nav class=" navbar fixed-top navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img class="logo-imgs img-fluid" src="logo-replace.png" alt="Nabatati'Logo">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+          <li class="nav-item me-4">
+            <a class="nav-link" aria-current="page"
+              [routerLinkActiveOptions]="{exact: true}"
+              routerLink="/" routerLinkActive="activee">
+              Home
+            </a>
+          </li>
+
+          <li class="nav-item dropdown me-4">
+            <a routerLinkActive="activee"
+              [routerLinkActiveOptions]="{exact: true}"
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Services
+            </a>
+
+            <ul class="dropdown-menu services-dropdown shadow border-0 p-2">
+              <li>
+                <a class="dropdown-item service-item" routerLink="/model" routerLinkActive="activee">
+                  <div class="service-icon">
+                    <i class="bi bi-tree"></i>
+                  </div>
+
+                  <div class="service-content">
+                    <h6>AI Plant Diagnosis</h6>
+                    <p>Upload a leaf photo and get accurate disease detection.</p>
+                  </div>
+
+                  <div class="service-arrow">
+                    <i class="bi bi-arrow-right"></i>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item service-item" routerLink="/chatAi" routerLinkActive="activee">
+                  <div class="service-icon">
+                    <i class="bi bi-chat-dots"></i>
+                  </div>
+
+                  <div class="service-content">
+                    <h6>AI Chat Bot</h6>
+                    <p>Get instant answers to all your plant care questions.</p>
+                  </div>
+
+                  <div class="service-arrow">
+                    <i class="bi bi-arrow-right"></i>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item service-item" href="#Expert_Talk">
+                  <div class="service-icon">
+                    <i class="bi bi-person"></i>
+                  </div>
+
+                  <div class="service-content">
+                    <h6>Talk with Our Expert</h6>
+                    <p>Connect with plant care specialists for personalized advice.</p>
+                  </div>
+
+                  <div class="service-arrow">
+                    <i class="bi bi-arrow-right"></i>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item me-4">
+            <a routerLinkActive="activee"
+              [routerLinkActiveOptions]="{exact: true}"
+              class="nav-link"
+              routerLink="/contactUs">
+              Contact Us
+            </a>
+          </li>
+        </ul>
+
+        <!-- Right side actions -->
+        <div class="nav-actions d-flex align-items-center">
+
+          <!-- Consultations for logged in users -->
+          <div *ngIf="isLoggedIn" class="nav-action-item position-relative">
+            <button class="btn nav-btn-main" (click)="showActiveChats = !showActiveChats">
+              <i class="fa-regular fa-comments me-2"></i>
+              Consultations
+
+              <span *ngIf="activeChats.length > 0" class="badge-count">
+                {{ activeChats.length }}
+              </span>
+            </button>
+
+            <div *ngIf="showActiveChats" class="custom-dropdown right-dropdown">
+              <h6 class="dropdown-title">
+                {{ userRole === 'engineer' ? 'Active Chats' : 'My Consultations' }}
+              </h6>
+
+              <div *ngIf="activeChats.length === 0" class="empty-state text-danger">
+                {{ userRole === 'engineer' ? 'No Active Chats.' : 'No Consultations Yet.' }}
+              </div>
+
+              <div *ngFor="let chat of activeChats" class="dropdown-card">
+                <p class="mb-1"><strong>Chat:</strong> {{ chat._id }}</p>
+
+                <p class="mb-2" *ngIf="userRole === 'engineer'">
+                  <strong>User:</strong> {{ chat.user?.email || chat.userId }}
+                </p>
+
+                <p class="mb-2" *ngIf="userRole !== 'engineer'">
+                  <strong>Engineer:</strong> {{ chat.engineer?.name || chat.engineerName || chat.engineerId }}
+                </p>
+
+                <button class="btn btn-sm btn-open-chat" (click)="openChat(chat._id)">
+                  Open Chat
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notifications -->
+          <div *ngIf="isLoggedIn" class="nav-action-item position-relative">
+            <button
+              class="btn nav-icon-btn position-relative"
+              type="button"
+              (click)="showNotificationList = !showNotificationList"
+              [attr.aria-expanded]="showNotificationList">
+
+              <i class="bi bi-bell"></i>
+
+              <span *ngIf="notifications.length > 0" class="icon-badge">
+                {{ notifications.length }}
+              </span>
+            </button>
+
+            <div *ngIf="showNotificationList" class="custom-dropdown right-dropdown">
+              <h6 class="dropdown-title">Notifications</h6>
+
+              <div *ngIf="notifications.length === 0" class="empty-state text-danger">
+                You Dont have any new notifications.
+              </div>
+
+              <div
+                *ngFor="let n of notifications; let i = index"
+                class="dropdown-card clickable-card"
+                (click)="openChatFromNotification(n.consultationId, i, n.engineerId)">
+                {{ n.message }}
+              </div>
+            </div>
+          </div>
+
+          <!-- Join Us when not logged in -->
+          <div *ngIf="!isLoggedIn" class="nav-action-item">
+            <div class="btn-group join-dropdown-wrapper">
+              <button
+                type="button"
+                class="btn nav-btn-main join-main-btn dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="bi bi-person-plus me-2"></i>
+                Join Us
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end clean-dropdown-menu join-dropdown-menu">
+                <li>
+                  <a class="dropdown-item join-dropdown-item" routerLink="/LogIn">
+                    <div class="join-item-icon">
+                      <i class="bi bi-box-arrow-in-right"></i>
+                    </div>
+
+                    <div class="join-item-content">
+                      <h6>Login</h6>
+                      <p>Access your account.</p>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item join-dropdown-item" routerLink="/SignUp">
+                    <div class="join-item-icon">
+                      <i class="bi bi-person-plus"></i>
+                    </div>
+
+                    <div class="join-item-content">
+                      <h6>Sign Up</h6>
+                      <p>Create a new account.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Profile -->
+          <div *ngIf="userName" title="Profile" class="nav-action-item position-relative">
+            <div class="btn-group">
+              <button
+                type="button"
+                class="btn profile-btn dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+
+                <span class="profile-avatar">
+                  {{ userName.charAt(0) }}
+                </span>
+
+                <span class="profile-name">
+                  Hi, {{ userName }}
+                </span>
+
+                <span *ngIf="inbox.length > 0" class="profile-pending-badge">
+                  {{ inbox.length }}
+                </span>
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end clean-dropdown-menu profile-main-dropdown">
+
+                <!-- Pending section for all logged in users -->
+                <li *ngIf="isLoggedIn" class="pending-section px-2 py-2">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="fw-bold pending-title">
+                      {{ userRole === 'engineer' ? 'Pending Consultations' : 'My Pending Consultations' }}
+                    </span>
+
+                    <span *ngIf="inbox.length > 0" class="badge rounded-pill bg-danger">
+                      {{ inbox.length }}
+                    </span>
+                  </div>
+
+                  <div *ngIf="inbox.length === 0" class="empty-state text-secondary small px-1 py-2">
+                    {{ userRole === 'engineer' ? 'No Pending Chats' : 'No Pending Consultations' }}
+                  </div>
+
+                  <div *ngIf="inbox.length > 0" class="pending-list">
+                    <div *ngFor="let n of inbox" class="pending-chat-card">
+                      <p class="mb-1"><strong>Chat:</strong> {{ n.consultationId }}</p>
+
+                      <p class="mb-2" *ngIf="userRole === 'engineer'">
+                        <strong>From User Id:</strong> {{ n.user?.name || n.userId }}
+                      </p>
+
+                      <p class="mb-2" *ngIf="userRole !== 'engineer'">
+                        <strong>Status:</strong> Pending
+                      </p>
+
+                      <div class="d-flex justify-content-end" *ngIf="userRole === 'engineer'">
+                        <button
+                          class="btn btn-sm btn-accept-chat"
+                          (click)="acceptConsultation(n._id); $event.stopPropagation()">
+                          Accept
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li *ngIf="isLoggedIn"><hr class="dropdown-divider"></li>
+
+                <!-- Logout -->
+                <li *ngIf="isLoggedIn" (click)="logout()">
+                  <a class="dropdown-item text-danger" href="javascript:void(0)">Logout</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </nav>
+</div>

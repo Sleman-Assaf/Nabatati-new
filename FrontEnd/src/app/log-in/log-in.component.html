@@ -1,0 +1,48 @@
+<app-navbar></app-navbar>
+<div class="background-container" id="LogIn">
+        <div class="login-section">
+            <div class="login-container ">
+                <div class="welcome-header">
+                    <h3>Welcome to <span><img src="ContactUsLogo.png" alt=""></span> </h3>
+                    <span class="brand-name"></span>
+                </div>
+
+                <h1 class="signin-header">Log In</h1>
+
+               
+
+                <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+                    <div class="form-group">
+                        <label class="form-label">Email address</label>
+                        <input formControlName="email" type="email" class="form-control" placeholder="Email address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Enter your Password</label>
+                        <input formControlName="password" type="password" class="form-control" placeholder="Password" required>
+                        <div class="forgot-password ">
+                          <div class="clickForgetPassord"><div   (click)="requestPasswordReset()">Forgot Password?</div></div>  
+                        </div>
+                    </div>
+
+                   
+
+                    <button type="submit" class="signin-btn">Log In</button>
+                    
+                </form>
+                <div *ngIf="resetMessage" class="alert alert-info mt-2 text-center">
+                    {{ resetMessage }}
+                  </div>
+                <div *ngIf="errorMessage" class="alert alert-danger mt-2">
+  {{ errorMessage }}
+</div>
+<div *ngIf="successMessage" class="alert alert-danger mt-3 text-center">
+  {{ successMessage }}
+</div>
+            </div>
+        </div>
+    </div>
+   
+    <app-footer></app-footer>
+
+

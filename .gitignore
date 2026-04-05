@@ -1,0 +1,25 @@
+# FrontEnd (Angular)
+FrontEnd/node_modules/
+FrontEnd/dist/
+FrontEnd/.angular/
+FrontEnd/.vscode/
+
+# chat-main (Node.js)
+chat-main/node_modules/
+chat-main/.env
+chat-main/logs/
+chat-main/dist/
+
+# BackEnd (Django / Python)
+BackEnd/venv/
+BackEnd/__pycache__/
+BackEnd/**/*.pyc
+BackEnd/db.sqlite3
+BackEnd/.env
+BackEnd/staticfiles/
+BackEnd/media/
+
+# General
+*.rar
+.DS_Store
+Thumbs.db

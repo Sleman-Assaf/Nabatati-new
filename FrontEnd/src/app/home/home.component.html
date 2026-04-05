@@ -1,0 +1,819 @@
+
+  <app-navbar></app-navbar>
+
+  <section class="hero hidden " data-aos="fade-up">
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-lg-6 col-xl-5  d-flex flex-column justify-content-center">
+
+
+
+      <div class="main-text  ">
+<h1 class="mb-3 text-center text-lg-start">
+Keep Your Plants Healthy with<span class="green "> Nabatati</span> <br>
+ 
+
+</h1>
+<p class="mb-5 text-center text-lg-start text-secondary ">
+ Powered by machine learning, Nabatati provides precise analysis of plant leaves, helping you detect issues early and take action.
+</p>
+
+<div class="d-flex justify-content-center justify-content-lg-start mb-3">
+  <a href="#Services">
+  <button class="btn fw-0 btn-primary px-4 rounded-5">Learn More <i class="fa-solid fa-arrow-right ms-1"></i></button>
+</a>
+</div>
+      </div>
+
+
+
+    </div>
+
+    <div class="col-lg-6 col-xl-7">
+<div class="hero-img-banner ">
+<img src="hero-image copy.png" class="img-fluid" alt="">
+
+</div>
+
+
+    </div>
+
+
+
+
+
+
+  </div>
+
+
+
+</div>
+
+
+
+
+
+
+  </section>
+  
+ <section class="services mt-5  " data-aos="fade-up"   >
+
+<div class="container sercive-bg" id="Services">
+  <div class="About-us-Header d-flex align-items-center ">
+
+
+
+ <div class="aboutUs-subHeader text-center w-100 ms-1"> <img src="noto_potted-plant.png" class="mb-4 me-1 mt-1" alt="tree">Our Services</div>
+ 
+
+</div>
+
+<div class="row sercive-mt g-3  " data-aos="fade-up">
+
+<div class="col-lg-4  col-md-6 col-sm-12 " data-aos="fade-up" >
+<div class="card-container d-flex flex-column h-100">
+
+<div class="Card-text flex-grow-1">
+
+  <div class="cardNumber">
+    0 1
+  </div>
+  <h2 class="text-stlye mb-3">AI-Powered Plant Diagnosis</h2>
+<p class="paragraph-style mb-5">Upload a leaf image, and our advanced AI model will analyze it to determine if your plant is affected by a disease. Get instant and accurate results to help you take action</p>
+
+
+</div>
+
+<div class="card-btn d-flex align-items-end">
+ <button (click)="goToModelPage()" routerLink="/model" class="btn btn-primary px-4 rounded-5 fw-0">Learn More<i class="fa-solid fa-arrow-right ms-1"></i></button>
+</div>
+
+
+
+</div>
+
+
+
+
+</div>
+<div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
+<div class="card-container d-flex flex-column h-100">
+
+<div class="Card-text flex-grow-1">
+
+  <div class="cardNumber">
+    0 2
+  </div>
+  <h2 class="text-stlye mb-3">Smart AI Chatbot</h2>
+<p class="paragraph-style mb-5 mt-5">Have plant-related questions? Our AI-powered chatbot is here to provide instant answers, care tips, and disease prevention advice, making plant care easier than ever</p>
+
+
+</div>
+
+<div class="card-btn d-flex align-items-end">
+ <a (click)=" goToChatAi()"><button class="btn btn-primary px-4 rounded-5 fw-0">Learn More <i class="fa-solid fa-arrow-right ms-1"></i></button></a> 
+</div>
+
+
+</div>
+
+
+
+
+</div>
+<div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
+<div class="card-container d-flex flex-column h-100 ">
+
+<div class="Card-text flex-grow-1 ">
+
+  <div class="cardNumber">
+    0 3
+  </div>
+  <h2 class="text-stlye mb-3">Consult with Agricultural Experts</h2>
+<p class="paragraph-style mb-5">Need expert advice? Connect with professional agricultural engineers for personalized guidance, detailed diagnoses, and expert solutions to keep your plants healthy</p>
+
+
+
+</div>
+
+
+<div class="card-btn d-flex align-items-end">
+<a href="#Expert_Talk"><button class="btn btn-primary px-4 rounded-5 fw-0">Learn More <i class="fa-solid fa-arrow-right ms-1"></i></button></a>
+  
+</div>
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+</div>  
+
+
+
+ </section>
+
+
+
+  <section  class="About-Us" data-aos="fade-up"    >
+  <div class="container">
+    <div class="row" data-aos="fade-up">
+      <div class="col-lg-6">
+        <div class="About-us-Photo mt-4 text-center text-lg-start">
+          <img src="aBOUT-US.png" class="img-fluid" alt="About Us Photo">
+        </div>
+      </div>
+      <div class="col-lg-6 d-flex flex-column align-items-center justify-content-center text-center text-lg-start">
+        <div class="About-us-text mb-5">
+          <div class="d-flex justify-content-center justify-content-lg-start mt-5 align-items-center">
+            <p class="About-us-Subject mb-0">ABOUT US</p>
+            <img src="GREEN ARROW.png" class="ms-1 mb-1" alt="arrow about us">
+          </div>
+          <div class="AboutUs-MainText">
+            <div class="row">
+              <div class="col-12">
+                <div class="About-us-Header d-flex align-items-center">
+                  <div class="aboutUs-subHeader text-center text-lg-start ms-1">
+                    <img src="noto_potted-plant.png" class="mb-4 mt-1" alt="tree">
+                    Nabatati – Where Technology Meets Nature
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="about-us-paragraph mt-4 mb-5">
+              Welcome to Nabatati, an AI-powered platform designed to help farmers and plant enthusiasts detect plant diseases with ease. By simply uploading an image of a plant leaf, our intelligent system analyzes it and determines whether the plant is affected by a disease or not. This allows you to take the necessary steps to keep your plants healthy.
+            </p>
+            <div class="row gy-3">
+              <div class="col-md-6">
+                <div class="left">
+                  <div class="subjectt">
+                    <i class="fa-solid fa-check me-2"></i>
+                    <span class="pAbout">User-Friendly Experience</span>
+                  </div>
+                  <div class="paragraph text-secondary mt-3">
+                    A simple and intuitive platform designed for all plant lovers
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right">
+                  <div class="subjectt">
+                    <i class="fa-solid fa-check me-2"></i>
+                    <span class="pAbout">Personalized Care Tips</span>
+                  </div>
+                  <div class="paragraph text-secondary mt-3">
+                    Receive expert recommendations based on AI analysis to keep your plants healthy.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section class="Gallary gallery-section" data-aos="fade-up">
+  <div class="gallery-bg-leaf leaf-top-right"></div>
+  <div class="gallery-bg-leaf leaf-bottom-left"></div>
+<div class="fluid-container">.
+<div class="container">
+    <div class="gallery-card">
+
+      <div class="gallery-header text-center">
+        <span class="gallery-label">GALLERY</span>
+        <h2 class="gallery-title">Our Gallery</h2>
+        <p class="gallery-subtitle">
+          A glimpse of nature’s beauty, captured in moments
+          that inspire and refresh.
+        </p>
+
+        <div class="gallery-divider">
+          <span></span>
+          <i class="bi bi-leaf"></i>
+          <span></span>
+        </div>
+      </div>
+
+   <div class="gallery-slider-area">
+  <div class="gallery-item gallery-left-back">
+    <img [src]="galleryImages[0]" alt="Gallery Image">
+  </div>
+
+  <div class="gallery-item gallery-left-front">
+    <img [src]="galleryImages[1]" alt="Gallery Image">
+  </div>
+
+  <div class="gallery-item gallery-center">
+    <img [src]="galleryImages[2]" alt="Gallery Image">
+  </div>
+
+  <div class="gallery-item gallery-right-front">
+    <img [src]="galleryImages[3]" alt="Gallery Image">
+  </div>
+
+  <div class="gallery-item gallery-right-back">
+    <img [src]="galleryImages[4]" alt="Gallery Image">
+  </div>
+</div>
+
+<div class="gallery-nav">
+  <button class="gallery-nav-btn" (click)="prevSlide()">
+    <i class="bi bi-arrow-left"></i>
+  </button>
+  <button class="gallery-nav-btn" (click)="nextSlide()">
+    <i class="bi bi-arrow-right"></i>
+  </button>
+</div>
+
+    </div>
+  </div>
+</div>
+  
+
+</section>
+
+
+
+
+<section class="Revew " data-aos="fade-up">
+    <div class="container">
+        <div class="d-flex justify-content-center mt-5">
+            <p class="About-us-Subject">
+                Client Testimonials
+                <span>
+                    <img src="GREEN ARROW.png" class="ms-1 mb-1" alt="arrow about us">
+                </span>
+            </p>
+        </div>
+
+        <div class="About-us-Header d-flex align-items-center">
+            <div class="aboutUs-subHeader text-center w-100 ms-1">
+                <img src="noto_potted-plant.png" class="mb-4 me-1 mt-1" alt="tree">Client Reviews
+            </div>
+        </div>
+
+        <div class="revContainer">
+            <div class="cardContainer">
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row pos d-flex align-items-center justify-content-center">
+                                <div class="col-lg-6 d-flex align-items-center">
+                                    <div class="content mb-3 mt-3">
+                                        <div class="text">
+                                            <p class="card_text">
+                                                I was worried about my indoor plants turning yellow, so I uploaded a picture on Nabatati. Within seconds, the AI identified the issue and suggested solutions! I followed the recommendations, and my plants are now thriving. This platform is a game-changer for plant lovers!
+                                            </p>
+                                            <div class="infoIcons d-flex justify-content-between align-items-center">
+                                                <div class="photoSelfi d-flex align-items-center">
+                                                    <div class="photo">
+                                                        <img src="profile.png" alt="Profile Picture">
+                                                    </div>
+                                                    <div class="textInfo ms-3">
+                                                        <span class="name mt-2">Saleh</span><br>
+                                                        <span class="nameParagraph">President of Sales</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="arrowNextAndPre">
+                                                    <div class="arrowContainer d-flex">
+                                                        <div class="left" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                                            <i class="fa-solid fa-arrow-left"></i>
+                                                        </div>
+                                                        <div class="right ms-3" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                                            <i class="fa-solid fa-arrow-right"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-12">
+                                    <div class="reveoPHOTO text-center text-lg-start">
+                                        <img src="carousol copy-3.png" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="row pos d-flex align-items-center justify-content-center">
+                                <div class="col-lg-6 d-flex align-items-center">
+                                    <div class="content mb-3 mt-3">
+                                        <div class="text">
+                                            <p class="card_text">
+                                                As a beginner gardener, I always struggled with identifying plant diseases. Nabatati’s AI chatbot provided instant and reliable answers to all my questions. The best part? It’s super easy to use, even for someone with no technical experience!
+                                            </p>
+                                            <div class="infoIcons d-flex justify-content-between align-items-center">
+                                                <div class="photoSelfi d-flex align-items-center">
+                                                    <div class="photo">
+                                                        <img src="profile.png" alt="">
+                                                    </div>
+                                                    <div class="textInfo ms-3">
+                                                        <span class="name mt-2">Sleman</span><br>
+                                                        <span class="nameParagraph">It Manager</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="arrowNextAndPre">
+                                                    <div class="arrowContainer d-flex">
+                                                        <div class="left" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                                            <i class="fa-solid fa-arrow-left"></i>
+                                                        </div>
+                                                        <div class="right ms-3" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                                            <i class="fa-solid fa-arrow-right"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-12">
+                                    <div class="reveoPHOTO text-center text-lg-start">
+                                        <img src="carousol copy-1.png" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                                  <div class="carousel-item">
+                            <div class="row pos d-flex align-items-center justify-content-center">
+                                <div class="col-lg-6 d-flex align-items-center">
+                                    <div class="content mb-3 mt-3">
+                                        <div class="text">
+                                            <p class="card_text">
+                                                As a beginner gardener, I always struggled with identifying plant diseases. Nabatati’s AI chatbot provided instant and reliable answers to all my questions. The best part? It’s super easy to use, even for someone with no technical experience!
+                                            </p>
+                                            <div class="infoIcons d-flex justify-content-between align-items-center">
+                                                <div class="photoSelfi d-flex align-items-center">
+                                                    <div class="photo">
+                                                        <img src="profile.png" alt="">
+                                                    </div>
+                                                    <div class="textInfo ms-3">
+                                                        <span class="name mt-2">Hamza</span><br>
+                                                        <span class="nameParagraph">engineer</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="arrowNextAndPre">
+                                                    <div class="arrowContainer d-flex">
+                                                        <div class="left" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                                            <i class="fa-solid fa-arrow-left"></i>
+                                                        </div>
+                                                        <div class="right ms-3" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                                            <i class="fa-solid fa-arrow-right"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-12">
+                                    <div class="reveoPHOTO text-center text-lg-start">
+                                        <img src="carousol copy-2.png" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                                       <div class="carousel-item">
+                            <div class="row pos d-flex align-items-center justify-content-center">
+                                <div class="col-lg-6 d-flex align-items-center">
+                                    <div class="content mb-3 mt-3">
+                                        <div class="text">
+                                            <p class="card_text">
+                                                As a beginner gardener, I always struggled with identifying plant diseases. Nabatati’s AI chatbot provided instant and reliable answers to all my questions. The best part? It’s super easy to use, even for someone with no technical experience!
+                                            </p>
+                                            <div class="infoIcons d-flex justify-content-between align-items-center">
+                                                <div class="photoSelfi d-flex align-items-center">
+                                                    <div class="photo">
+                                                        <img src="profile (1).png" alt="">
+                                                    </div>
+                                                    <div class="textInfo ms-3">
+                                                        <span class="name mt-2">Nisreen </span><br>
+                                                        <span class="nameParagraph">It Manager</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="arrowNextAndPre">
+                                                    <div class="arrowContainer d-flex">
+                                                        <div class="left" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                                            <i class="fa-solid fa-arrow-left"></i>
+                                                        </div>
+                                                        <div class="right ms-3" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                                            <i class="fa-solid fa-arrow-right"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-12">
+                                    <div class="reveoPHOTO text-center text-lg-start">
+                                        <img src="carousol copy-4.png" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                                              <div class="carousel-item">
+                            <div class="row pos d-flex align-items-center justify-content-center">
+                                <div class="col-lg-6 d-flex align-items-center">
+                                    <div class="content mb-3 mt-3">
+                                        <div class="text">
+                                            <p class="card_text">
+                                                As a beginner gardener, I always struggled with identifying plant diseases. Nabatati’s AI chatbot provided instant and reliable answers to all my questions. The best part? It’s super easy to use, even for someone with no technical experience!
+                                            </p>
+                                            <div class="infoIcons d-flex justify-content-between align-items-center">
+                                                <div class="photoSelfi d-flex align-items-center">
+                                                    <div class="photo">
+                                                        <img src="profile (1).png" alt="">
+                                                    </div>
+                                                    <div class="textInfo ms-3">
+                                                        <span class="name mt-2">Umniah </span><br>
+                                                        <span class="nameParagraph">It Manager</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="arrowNextAndPre">
+                                                    <div class="arrowContainer d-flex">
+                                                        <div class="left" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                                            <i class="fa-solid fa-arrow-left"></i>
+                                                        </div>
+                                                        <div class="right ms-3" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                                            <i class="fa-solid fa-arrow-right"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-12">
+                                    <div class="reveoPHOTO text-center text-lg-start">
+                                        <img src="carousol copy-5.png" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                <div class="carousel-item">
+                            <div class="row pos d-flex align-items-center justify-content-center">
+                                <div class="col-lg-6 d-flex align-items-center">
+                                    <div class="content mb-3 mt-3">
+                                        <div class="text">
+                                            <p class="card_text">
+                                                As a beginner gardener, I always struggled with identifying plant diseases. Nabatati’s AI chatbot provided instant and reliable answers to all my questions. The best part? It’s super easy to use, even for someone with no technical experience!
+                                            </p>
+                                            <div class="infoIcons d-flex justify-content-between align-items-center">
+                                                <div class="photoSelfi d-flex align-items-center">
+                                                    <div class="photo">
+                                                        <img src="profile.png" alt="">
+                                                    </div>
+                                                    <div class="textInfo ms-3">
+                                                        <span class="name mt-2">Jihad</span><br>
+                                                        <span class="nameParagraph"> Team Leader</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="arrowNextAndPre">
+                                                    <div class="arrowContainer d-flex">
+                                                        <div class="left" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                                            <i class="fa-solid fa-arrow-left"></i>
+                                                        </div>
+                                                        <div class="right ms-3" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                                            <i class="fa-solid fa-arrow-right"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-12">
+                                    <div class="reveoPHOTO text-center text-lg-start">
+                                        <img src="carousol copy-6.png" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</section>
+
+
+
+
+
+
+<section class="expert experts-section my-5" id="Expert_Talk" data-aos="fade-up">
+  <div class="expert-leaf leaf-top-right"></div>
+  <div class="expert-leaf leaf-bottom-left"></div>
+  <div class="expert-blur blur-left"></div>
+  <div class="expert-blur blur-right"></div>
+
+  <div class="container">
+    <div class="experts-card-wrapper">
+      <div class="experts-header text-center">
+        <div class="experts-mini-title">
+          <img src="noto_potted-plant.png" alt="plant icon">
+          Our Great Expert
+        </div>
+
+        <p class="experts-subtitle">
+          Meet the experienced minds behind our mission,
+          driving innovation and growth in agriculture.
+        </p>
+
+        <div class="experts-divider">
+          <span></span>
+          <i class="bi bi-flower1"></i>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="row g-4 Card_ExpertContainer" data-aos="fade-up">
+
+        <div class="col-xl-4 col-lg-4 col-md-6">
+          <div class="expert-card">
+            <div class="expert-card-top-deco"></div>
+
+        
+
+            <div class="Expert_text">
+              <h3>
+                Dr. Saleh Al-Shdiefat
+              </h3>
+
+              <h6>Faculty Member – Jerash University</h6>
+              <div class="expert-line"></div>
+
+              <p>
+                10+ Years of Professional Experience in the Agricultural Field
+              </p>
+            </div>
+
+            <div class="expert-actions">
+              <a [routerLink]="['/Expert', 0]" class="btn-view-profile">View Profile</a>
+              <button class="btn-contact" (click)="contactEngineer('17')">Contact</button>
+            </div>
+
+            <div class="expert-wave"></div>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-lg-4 col-md-6">
+          <div class="expert-card">
+            <div class="expert-card-top-deco"></div>
+
+           
+
+            <div class="Expert_text">
+              <h3>
+                Feras Harahsheh
+              </h3>
+
+              <h6>Government Office</h6>
+              <div class="expert-line"></div>
+
+              <p>
+                10+ years of hands-on experience in agricultural development and public sector services.
+              </p>
+            </div>
+
+            <div class="expert-actions">
+              <a [routerLink]="['/Expert', 1]" class="btn-view-profile">View Profile</a>
+              <button class="btn-contact" (click)="contactEngineer('18')">Contact</button>
+            </div>
+
+            <div class="expert-wave"></div>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-lg-4 col-md-6">
+          <div class="expert-card">
+            <div class="expert-card-top-deco"></div>
+
+          
+
+            <div class="Expert_text">
+              <h3>
+                Eng. Yousef Al-Kawaleet
+              </h3>
+
+              <h6>Private Company</h6>
+              <div class="expert-line"></div>
+
+              <p>
+                5–10 years of experience in the agricultural field and private sector development
+              </p>
+            </div>
+
+            <div class="expert-actions">
+              <a [routerLink]="['/Expert', 2]" class="btn-view-profile">View Profile</a>
+              <button class="btn-contact" (click)="contactEngineer('19')">Contact</button>
+            </div>
+
+            <div class="expert-wave"></div>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-lg-4 col-md-6">
+          <div class="expert-card">
+            <div class="expert-card-top-deco"></div>
+
+          
+
+            <div class="Expert_text">
+              <h3>
+                Sharif Al-Rawashdeh
+              </h3>
+
+              <h6>Government Office</h6>
+              <div class="expert-line"></div>
+
+              <p>
+                10+ years of experience in agricultural development and public sector services
+              </p>
+            </div>
+
+            <div class="expert-actions">
+              <a [routerLink]="['/Expert', 3]" class="btn-view-profile">View Profile</a>
+              <button class="btn-contact" (click)="contactEngineer('20')">Contact</button>
+            </div>
+
+            <div class="expert-wave"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+  
+
+
+<section class="Qusitions qustaionsBg py-5" data-aos="fade-up">
+
+
+<div class="container">
+  <div class="About-us-Header d-flex align-items-center ">
+
+
+
+ <div class="aboutUs-subHeader text-center text-lg-start ms-1 mb-4 mt-md-3"> <img src="noto_potted-plant.png" class="mb-4 mt-1" alt="tree"> Frequently Asked Questions</div>
+ 
+
+</div>
+
+<div class="row d-flex align-items-center justify-content-between" data-aos="fade-up">
+
+
+<div class="col-lg-6 ">
+
+
+
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+     <span class="accordiangText">How does the AI model diagnose plant diseases?</span>  
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <p class="text-secondary">Our AI model analyzes the uploaded leaf image using advanced deep learning algorithms. It detects patterns, spots early signs of diseases, and provides an instant diagnosis with possible causes and suggested treatments</p>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <span class="accordiangText">Can I get professional advice from an expert?</span> 
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       <p class="text-secondary">Yes! If you need personalized guidance, our platform connects you with professional agricultural engineers who can provide detailed insights and recommendations based on your plant's condition.
+
+</p>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        <span class="accordiangText">Is Nabatati free to use?</span> 
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+          <p class="text-secondary">Nabatati offers a free AI diagnosis service, while expert consultations may have a fee. We aim to make plant care accessible to everyone, so we provide affordable options for all users.
+
+</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+</div>
+
+<div class="col-lg-5">
+
+<div class="qustionsPhoto d-flex justify-content-end">
+  <img src="Asked-quistion.png" class="img-fluid" alt="">
+</div>
+
+
+</div>
+</div>
+</div>
+</section>
+
+<app-footer></app-footer>
+

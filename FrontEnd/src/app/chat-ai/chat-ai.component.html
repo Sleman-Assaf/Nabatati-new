@@ -1,0 +1,64 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+
+  <div class="ChatAiBanner d-flex justify-content-center">
+    <img src="chatAiBanner.png" class="img-fluid" alt="">
+  </div>
+
+  <div class="chatContainer">
+
+    <div class="logoChatContainer d-flex justify-content-start">
+      <img src="NabatatiChatLogo.png" class="img-fluid" alt="">
+    </div>
+
+    <div #chatContainer class="contentContainer">
+
+      <div class="mianChatText text-center">
+        <h3> What Can I Help With ?</h3>
+      </div>
+
+      <div *ngFor="let msg of messages" class="textContainer">
+
+      
+        <div *ngIf="msg.sender === 'user'" class="userChat d-flex justify-content-end">
+          <p>{{ msg.text }}</p>
+        </div>
+
+      
+        <div *ngIf="msg.sender === 'bot'" class="chatBotCHat d-flex flex-column justify-content-start">
+          <div [innerHTML]="formatMessage(msg.text)"></div>
+        </div>
+
+      </div>
+
+    
+      <div *ngIf="isTyping" class="chat-bubble">
+        <div class="typing">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+
+    
+      <div class="inputText mt-5 d-flex">
+        <div class="inputContainer">
+          <input (keydown.enter)="send()" [(ngModel)]="userMessage" type="text" placeholder="Message Chat">
+          <div class="sendBtn">
+            <button (click)="send()"><i class="fa-solid fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="bg">
+  <img src="bg-chat.png" class="img-fluid" alt="">
+</div>
+
+<app-footer></app-footer>

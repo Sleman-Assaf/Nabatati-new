@@ -1,0 +1,133 @@
+<app-navbar></app-navbar>
+
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center">
+      <div class="modal-header mb-1">
+        <h5 style="color: green;" class="modal-title" id="successModalLabel">Account is Pending!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body mt-3">
+        Your account Is Under Review by Admins!
+        <br>Your Account Will Activated in 24H. Thank You
+      </div>
+      <div class="modal-footer mt-3">
+        <button type="button" class="btn btn-primary px-3 mt-3 rounded-5 p-1" data-bs-dismiss="modal">
+          <a style="color: #fff; text-decoration: none;" [routerLink]="'/LogIn'">Log In</a>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="signup-section" id="SignUp">
+  <div class="signup-container">
+
+    <div class="welcome-header nabatatiLogo">
+      <h3>Welcome to <span><img src="ContactUsLogo.png" alt=""></span></h3>
+      <span class="brand-name"></span>
+    </div>
+
+    <h1 class="signup-header">Expert Sign up</h1>
+
+   
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+
+      <!-- Username -->
+      <div class="form-group">
+        <label class="form-label">Enter your username</label>
+        <input formControlName="name" type="text" class="form-control" placeholder="Username" required>
+        <small class="form-hint">
+          - Username must start with a letter<br>
+          - Only English letters and numbers are allowed<br>
+          - Symbols like &#64;, #, -, _, etc. are not allowed
+        </small>
+        <div *ngIf="registerForm.get('name')?.invalid && (registerForm.get('name')?.dirty || registerForm.get('name')?.touched)">
+          <small *ngIf="registerForm.get('name')?.errors?.['required']">Username is required</small>
+          <small *ngIf="registerForm.get('name')?.errors?.['minlength']">Minimum 3 characters</small>
+          <small *ngIf="registerForm.get('name')?.errors?.['pattern']">Invalid username format</small>
+          <small *ngIf="registerForm.get('name')?.errors?.['nameTaken']">This username is already taken.</small> <!-- ✅ أضف هذا السطر -->
+
+        </div>
+      </div>
+
+   
+      <div class="form-group">
+        <label class="form-label">Email address</label>
+        <input formControlName="email" type="email" class="form-control" placeholder="Email address" required>
+        <div *ngIf="registerForm.get('email')?.invalid && (registerForm.get('email')?.dirty || registerForm.get('email')?.touched)">
+          <small *ngIf="registerForm.get('email')?.errors?.['required']">Email is required</small>
+          <small *ngIf="registerForm.get('email')?.errors?.['email']">Invalid email format</small>
+          <small *ngIf="registerForm.get('email')?.errors?.['emailTaken']">This email is already registered</small>
+        </div>
+      </div>
+
+    
+      <div class="form-group">
+        <label class="form-label">Enter your password</label>
+        <input formControlName="password" type="password" class="form-control" placeholder="Password" required>
+        <small class="form-hint">
+          - At least 6 characters<br>
+          - Must include uppercase, lowercase, number, and symbol
+        </small>
+        <div *ngIf="registerForm.get('password')?.invalid && (registerForm.get('password')?.dirty || registerForm.get('password')?.touched)">
+          <small *ngIf="registerForm.get('password')?.errors?.['required']">Password is required</small>
+          <small *ngIf="registerForm.get('password')?.errors?.['minlength']">Minimum 6 characters</small>
+          <small *ngIf="registerForm.get('password')?.errors?.['pattern']">Weak password</small>
+        </div>
+      </div>
+
+    
+      <div class="form-group">
+        <label class="form-label">Confirm your password</label>
+        <input formControlName="password2" type="password" class="form-control" placeholder="Confirm Password" required>
+        <div *ngIf="registerForm.get('password2')?.invalid && (registerForm.get('password2')?.dirty || registerForm.get('password2')?.touched)">
+          <small *ngIf="registerForm.get('password2')?.errors?.['required']">Please confirm your password</small>
+        </div>
+        <div *ngIf="passwordsDoNotMatch">
+          <small style="color: red;">Passwords do not match</small>
+        </div>
+      </div>
+
+     
+      <div class="form-group">
+        <label class="form-label">Membership Number</label>
+        <input formControlName="membershipNumber" type="text" class="form-control" placeholder="Membership Number" required>
+        <div *ngIf="registerForm.get('membershipNumber')?.invalid && registerForm.get('membershipNumber')?.touched">
+          <small *ngIf="registerForm.get('membershipNumber')?.errors?.['required']">Membership number is required</small>
+          <small *ngIf="registerForm.get('membershipNumber')?.errors?.['membershipTaken']">This membership number is already registered</small>
+
+        </div>
+      </div>
+
+      
+      <div class="form-group">
+        <label class="form-label">Specialization</label>
+        <input formControlName="specialization" type="text" class="form-control" placeholder="Engineering Specialization" required>
+        <div *ngIf="registerForm.get('specialization')?.invalid && registerForm.get('specialization')?.touched">
+          <small *ngIf="registerForm.get('specialization')?.errors?.['required']">Specialization is required</small>
+        </div>
+      </div>
+
+     
+      <div class="form-group">
+        <label class="form-label">Upload your CV (PDF)</label>
+        <input type="file" accept=".pdf" (change)="onFileSelected($event)" class="form-control" required>
+        <div *ngIf="registerForm.get('cv')?.invalid && registerForm.get('cv')?.touched">
+          <small *ngIf="registerForm.get('cv')?.errors?.['required']">CV file is required</small>
+        </div>
+      </div>
+
+     
+      <div class="account-prompt">
+        <p>Already have an account? <a routerLink="/LogIn" class="signup-link">Log In</a></p>
+      </div>
+       
+
+      <button type="submit" class="signup-btn">Sign up</button>
+
+    </form>
+  </div>
+</div>
+
+<app-footer></app-footer>

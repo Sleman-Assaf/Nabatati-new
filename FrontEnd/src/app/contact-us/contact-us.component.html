@@ -1,0 +1,353 @@
+<app-navbar></app-navbar>
+
+<div class="container fontAmste">
+
+    <div class="ContactUsBanner fontAmste">
+<img src="contactus.png" class="img-fluid" alt="">
+
+
+    </div>
+
+    <div class="ContactInfo mb-5  mt-5">
+
+        <div class="row">
+
+<div class="col-xl-6 col-lg-12 col-md-12 d-flex justify-content-center align-items-center">
+
+    <div class="photoContactContainer mt-5 ">
+        <img src="contactusPhoto.png"  alt="">
+    </div>
+
+
+</div>
+
+<div class="col-xl-6 col-lg-12 col-md-12 d-flex flex-column">
+  <div class="d-flex justify-content-center justify-content-xl-start mt-5 align-items-center">
+            <p class="About-us-Subject mb-0">CONTACT INFORMATION</p>
+            <img src="GREEN ARROW.png" class="ms-1 mb-1" alt="arrow about us">
+          </div>
+            <div class="About-us-Header d-flex justify-content-center justify-content-xl-start align-items-center">
+                  <div class="aboutUs-subHeader fs-2 text-center text-lg-start">
+                    <img src="noto_potted-plant.png" class="mb-4 mt-1" alt="tree">
+                   We’d Love to Hear From You.
+                  </div>
+                </div>
+
+
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="cardContainer">
+
+<div class="row  textLabel  gy-4">
+
+    <div class="col-6">
+        <div class="mb-2"><i class="fa-solid fa-envelope me-2"></i> <span>Your Email</span> </div>
+        <input formControlName="email" class="w-100" type="email" placeholder="Your Email">
+    </div>
+    <div class="col-6">
+         <div class="mb-2"><i class="fa-solid fa-phone me-2"></i> <span>Your Number</span> </div>
+        <input formControlName="phone" class="w-100" type="tel" placeholder="07********">
+    </div>
+
+    <div class="col-12">
+          <div class="mb-2"><i class="fa-solid fa-location-dot me-2 "></i> <span>Your Address</span> </div>
+        <input formControlName="address" class="w-100" type="text" placeholder="Your Address">
+    </div>
+    <div class="col-12">
+          <div class="mb-2"><i class="fa-solid fa-paper-plane me-2"></i> <span>Message</span> </div>
+        <input formControlName="message" class="textbox w-100" type="text" placeholder="Write Message">
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary rounded-5 px-4 w-100 py-3 fs-5 ">Send Message</button>
+    </div>
+
+
+
+
+
+</div>
+
+
+
+
+</form>
+<div *ngIf="successMessage" class="alert alert-success">{{ successMessage }}</div>
+<div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+
+</div>
+
+
+        </div>
+
+
+
+    </div>
+
+    <div class="socialMedia">
+<h4 class="text-center">Follow Us</h4>
+
+<div class="row d-flex justify-content-center  mb-5">
+    <div class="col-lg-5 col-md-7 ">
+    <div class="About-us-Header d-flex justify-content-center  align-items-center">
+                  <div class="aboutUs-subHeader fs-2 text-center ">
+                    <img src="noto_potted-plant.png" class="mb-4 mt-1" alt="tree">
+                  Caring for Your Plants Has Never Been This Easy
+                  </div>
+                </div>
+                </div>
+</div>
+
+
+
+<div class="row gy-5">
+
+<div class="col-lg-6">
+    <div class="nabatatiLogo text-center">
+        <img src="ContactUsLogo.png" class="img-fluid" alt="">
+    </div>
+    <div class="text text-center">
+    <h3>Your plants matter. Let us help you care for them. 🌿</h3> 
+    </div>
+
+    <div class="socialIovns d-flex justify-content-center text-center">
+<span class="me-4"><i class="fa-brands fa-instagram"></i></span>
+<span class="me-4"><i class="fa-brands fa-facebook"></i></span>
+<span class="me-4"><i class="fa-brands fa-threads"></i></span>
+<span class="me-4"><i class="fa-brands fa-linkedin"></i></span>
+
+    </div>
+</div>
+
+<div class="col-lg-6">
+
+    <div class="SocialMeaiaPhoto text-center">
+        <img src="socialmediaPhoto.png" class="img-fluid" alt="">
+    </div>
+
+</div>
+
+
+</div>
+
+    </div>
+
+
+
+
+</div>
+ <div class="container-fluid cardsSections">
+
+
+            <div class="container">
+
+    <div class="OurTeam">
+
+        <div class="textAndArrow">
+<div class="row">
+
+   <div class="col-xl-4 col-lg-6 col-md-6 col-sm-10 col-9 ">
+            <div class="textTeam ">
+
+<h3 class="d-flex align-items-center teamText"><img src="noto_potted-plant.png"  class="img-fluid me-1" alt="">Our Greet Team </h3>
+
+
+            </div>
+
+
+            </div>
+
+<div class="col-xl-7 col-lg-6 col-md-6 col-sm-2 col-3 d-flex justify-content-end align-items-center">
+            <div class="arrow d-flex">
+<div class="leftArrow ">
+    <i data-bs-slide="prev" data-bs-target="#carouselExample" class="fa-solid fa-arrow-left"></i>
+</div>
+<div class="RightArrow ms-4">
+    <i data-bs-slide="next" data-bs-target="#carouselExample" class="fa-solid fa-arrow-right"></i>
+</div>
+
+            </div>
+</div>
+
+
+
+
+</div>
+        </div>
+
+
+       
+    </div>
+
+<div id="carouselExample" class="carousel slide mt-4">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+    
+<div class="row gy-5">
+
+<div class="col-xl-4 col-lg-6 center-class">
+<div class="cardContainerr">
+    <div class="cardPhoto">
+        <img src="profile1.png" class="img-fluid" alt="">
+    </div>
+    <div class="textInfo mt-4">
+          <h4 class="mb-3 green-text">Sleman Eial Alhusan</h4>
+          <p class="mb-4 text-secondary fw-normal">FrontEnd Developer</p>
+
+    </div>
+<div class="d-flex justify-content-center">
+    <div class="iconsInfo mt-2  ">
+        <span class="me-4"><i class="fa-brands fa-instagram"></i></span>
+<span class="me-4"><i class="fa-brands fa-facebook"></i></span>
+
+<span class=""><i class="fa-brands fa-linkedin"></i></span>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+<div class="col-xl-4 col-lg-6 center-class">
+<div class="cardContainerr">
+    <div class="cardPhoto">
+        <img src="profile3.png" class="img-fluid" alt="">
+    </div>
+    <div class="textInfo mt-4">
+          <h4 class="mb-3 green-text">Saleh Abu Karaki</h4>
+          <p class="mb-4 text-secondary fw-normal">BackEnd Developer</p>
+
+    </div>
+<div class="d-flex justify-content-center">
+    <div class="iconsInfo mt-2  ">
+        <span class="me-4"><i class="fa-brands fa-instagram"></i></span>
+<span class="me-4"><i class="fa-brands fa-facebook"></i></span>
+
+<span class=""><i class="fa-brands fa-linkedin"></i></span>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+
+<div class="col-xl-4 col-lg-6 center-class">
+<div class="cardContainerr">
+    <div class="cardPhoto">
+        <img src="profile4.png" class="img-fluid" alt="">
+    </div>
+    <div class="textInfo mt-4">
+          <h4 class="mb-3 green-text">Nissren Oweidat</h4>
+          <p class="mb-4 text-secondary fw-normal">BackEnd Developer</p>
+
+    </div>
+<div class="d-flex justify-content-center">
+    <div class="iconsInfo mt-2  ">
+        <span class="me-4"><i class="fa-brands fa-instagram"></i></span>
+<span class="me-4"><i class="fa-brands fa-facebook"></i></span>
+
+<span class=""><i class="fa-brands fa-linkedin"></i></span>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+    </div>
+    <div class="carousel-item">
+        <div class="row gy-5">
+             <div class="col-xl-4 col-lg-6 center-class">
+<div class="cardContainerr">
+    <div class="cardPhoto">
+        <img src="profile6.png" class="img-fluid" alt="">
+    </div>
+    <div class="textInfo mt-4">
+          <h4 class="mb-3 green-text">Jihad Aldaboiqi</h4>
+          <p class="mb-4 text-secondary fw-normal">BackEnd Developer</p>
+
+    </div>
+<div class="d-flex justify-content-center">
+    <div class="iconsInfo mt-2  ">
+        <span class="me-4"><i class="fa-brands fa-instagram"></i></span>
+<span class="me-4"><i class="fa-brands fa-facebook"></i></span>
+
+<span class=""><i class="fa-brands fa-linkedin"></i></span>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+ <div class="col-xl-4 col-lg-6 center-class  ">
+<div class="cardContainerr">
+    <div class="cardPhoto">
+        <img src="profile5.png" class="img-fluid" alt="">
+    </div>
+    <div class="textInfo mt-4">
+          <h4 class="mb-3 green-text">Hamza hassan</h4>
+          <p class="mb-4 text-secondary fw-normal">FrontEnd Developer</p>
+
+    </div>
+<div class="d-flex justify-content-center">
+    <div class="iconsInfo mt-2  ">
+        <span class="me-4"><i class="fa-brands fa-instagram"></i></span>
+<span class="me-4"><i class="fa-brands fa-facebook"></i></span>
+
+<span class=""><i class="fa-brands fa-linkedin"></i></span>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+ <div class="col-xl-4 col-lg-6 center-class ">
+<div class="cardContainerr">
+    <div class="cardPhoto">
+        <img src="profile2.png" class="img-fluid" alt="">
+    </div>
+    <div class="textInfo mt-4">
+          <h4 class="mb-3 green-text">Umniah Al-faqeer</h4>
+          <p class="mb-4 text-secondary fw-normal">Documentation</p>
+
+    </div>
+<div class="d-flex justify-content-center">
+    <div class="iconsInfo mt-2  ">
+        <span class="me-4"><i class="fa-brands fa-instagram"></i></span>
+<span class="me-4"><i class="fa-brands fa-facebook"></i></span>
+
+<span class=""><i class="fa-brands fa-linkedin"></i></span>
+    </div>
+  </div>
+
+</div>
+
+</div>
+        </div>
+  
+
+    </div>
+  
+  </div>
+ 
+ 
+</div>
+
+
+
+        </div>
+
+
+</div>
+
+<app-footer></app-footer>

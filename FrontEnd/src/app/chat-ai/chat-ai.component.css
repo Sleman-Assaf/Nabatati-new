@@ -1,0 +1,163 @@
+.body{
+    position: relative;
+    font-family: 'Plus';
+}
+.ChatAiBanner {
+
+}
+.ChatAiBanner img{
+border-radius: 25px;
+}
+.logoChatContainer img {
+    width: 220px;
+}
+.chatContainer{
+  border-radius: 25px;
+  border: 1px solid #D9D9D9;
+  padding: 25px 50px;
+  padding-bottom: 80px;
+  margin-top: 40px;
+background-color: #fff;
+  margin-bottom: 60px;
+  position: relative;
+-webkit-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.19);
+    box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.068);
+}
+.userChat p{
+    background-color: #F4F4F4;
+    padding: 7px 25px;
+    border-radius: 20px;
+    font-family: 'Plus';
+    font-weight: 600;
+    color: #434343;
+}
+.chatBotCHat p{
+   
+        padding: 7px 25px;
+        border-radius: 20px;
+        font-family: 'Plus';
+        font-weight: 600;
+        color: #434343;
+}
+
+.inputText {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.inputText input{
+    background-color: #F4F4F4;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 20px;
+    width: 100%;
+   
+}
+input[type=text]:focus {
+    border: 2px solid #1B5E20 !important;
+    outline: none;
+}
+   
+
+.inputContainer{
+    width: 100%;
+    position: relative;
+}
+.sendBtn{
+    position: absolute;
+  right: 0;
+    top: 50%;
+        transform: translateY(-50%);
+        padding: 30px;
+}
+.sendBtn button{
+    border: none;
+    color: #1B5E20;
+    font-size: 20px;
+}
+.mianChatText{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.bg img{
+width: 1700px;
+height: 650px;
+}
+.bg{
+position: absolute;
+margin-top: -600px;
+z-index: -111;
+
+}
+.container {
+    margin-bottom: 300px;
+}
+.contentContainer{
+    max-height: 800px ;
+    overflow-y: scroll;
+}
+
+
+
+
+.chat-bubble {
+    background-color: #E6F8F1;
+    padding: 16px 28px;
+    -webkit-border-radius: 20px;
+    -webkit-border-bottom-left-radius: 2px;
+    -moz-border-radius: 20px;
+    -moz-border-radius-bottomleft: 2px;
+    border-radius: 20px;
+    border-bottom-left-radius: 2px;
+    display: inline-block;
+}
+
+.typing {
+    align-items: center;
+    display: flex;
+    height: 17px;
+}
+
+.typing .dot {
+    animation: mercuryTypingAnimation 1.8s infinite ease-in-out;
+    background-color: #6CAD96; 
+    border-radius: 50%;
+    height: 7px;
+    margin-right: 4px;
+    vertical-align: middle;
+    width: 7px;
+    display: inline-block;
+}
+
+.typing .dot:nth-child(1) {
+    animation-delay: 200ms;
+}
+
+.typing .dot:nth-child(2) {
+    animation-delay: 300ms;
+}
+
+.typing .dot:nth-child(3) {
+    animation-delay: 400ms;
+}
+
+.typing .dot:last-child {
+    margin-right: 0;
+}
+
+@keyframes mercuryTypingAnimation {
+    0% {
+        transform: translateY(0px);
+        background-color: #6CAD96; 
+    }
+
+    28% {
+        transform: translateY(-7px);
+        background-color: #9ECAB9; 
+    }
+
+    44% {
+        transform: translateY(0px);
+        background-color: #B5D9CB; 
+}}

@@ -1,0 +1,123 @@
+<app-navbar></app-navbar>
+
+
+<div class="chat-page py-4 d-flex align-items-center">
+  <div class="container">
+    <div class="chat-layout">
+
+      <!-- Left Side Card -->
+      <div class="chat-side-card">
+        <div class="side-card-inner">
+          <div class="side-top">
+            <img src="profile.png" alt="Engineer" class="side-profile-img" />
+            <h3>{{ engineerName }}</h3>
+            <p class="specialist">Plant Disease Specialist</p>
+
+            
+          </div>
+
+          <div class="side-info">
+            <div class="info-box">
+              <h5>About Expert</h5>
+              <p>
+                Get help with plant diseases, yellow leaves, brown spots,
+                fungal infections, and treatment suggestions.
+              </p>
+            </div>
+
+            <div class="info-box">
+              <h5>Tips</h5>
+              <ul>
+                <li>Send a clear leaf photo</li>
+                <li>Describe the plant issue</li>
+                <li>Mention when the problem started</li>
+              </ul>
+            </div>
+
+            <a class="expert-list-btn" href="#Expert_Talk">View Expert List →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat -->
+      <div class="chat-wrapper">
+
+      
+
+        <!-- Mobile top button -->
+        <div class="mobile-expert-bar">
+          <a href="#Expert_Talk" class="mobile-expert-btn">
+            <img src="profile.png" alt="Engineer">
+            <span>{{ engineerName }}</span>
+          </a>
+        </div>
+
+        <!-- Header -->
+        <div class="chat-header">
+          <div class="expert-info">
+            <div class="expert-img">
+              <img src="profile.png" alt="Engineer">
+            </div>
+
+            <div class="expert-text">
+              <h3>{{ engineerName }} </h3>
+              <p>Plant Disease Specialist</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Messages -->
+        <div class="chat-body hightChat">
+
+       
+
+          <div
+            class="message-row"
+            *ngFor="let msg of messages"
+            [ngClass]="msg.sender === 'user' ? 'right' : 'left'"
+          >
+            <div class="msg-avatar" *ngIf="msg.sender !== 'user'">
+              <img src="profile.png" alt="Engineer">
+            </div>
+
+            <div
+              class="message-group"
+              [ngClass]="msg.sender === 'user' ? 'align-right' : 'align-left'"
+            >
+              <div
+                class="message-bubble"
+                [ngClass]="msg.sender === 'user' ? 'user-bubble' : 'eng-bubble'"
+              >
+                {{ msg.content }}
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="chat-footer">
+          <div class="input-area">
+            <input
+              (keydown.enter)="sendMessage()"
+              type="text"
+              [(ngModel)]="messageText"
+              placeholder="Type a message..."
+            />
+
+            <button class="send-btn" (click)="sendMessage()">
+              Send
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<app-footer></app-footer>
