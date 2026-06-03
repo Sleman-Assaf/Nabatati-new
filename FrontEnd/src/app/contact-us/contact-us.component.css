@@ -1,118 +1,440 @@
-
-.fontAmster{
+.fontAmster,
+.fontAmste {
     font-family: 'Plus' !important;
 }
-.ContactUsBanner img{
-border-radius: 25px;
+
+:host {
+    display: block;
+    width: 100%;
+    overflow-x: hidden;
 }
-form{
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Banner */
+.ContactUsBanner {
+    margin-top: 24px;
+}
+
+.ContactUsBanner img {
+    border-radius: 25px;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Form */
+form {
     background-color: #F1F5EB;
     border-radius: 20px;
     padding: 30px;
+    width: 100%;
 }
-input{
+
+input {
     border: 1px solid #E3DBD8;
     width: 80%;
-    border-radius:30px ;
+    border-radius: 30px;
     padding: 15px;
-outline: none;
+    outline: none;
+    max-width: 100%;
+    background-color: #fff;
 }
 
-
-input:focus{
+input:focus {
     border: 2px solid #1B5E20;
 }
- .textLabel{
+
+.textLabel {
     color: #1B5E20 !important;
 }
-.textbox{
- padding-bottom: 110px;
+
+.textbox {
+    padding-bottom: 110px;
 }
-.photoContactContainer img{
+
+/* Contact Photo */
+.photoContactContainer {
     width: 100%;
-    height: fit-content;
+}
+
+.photoContactContainer img {
+    width: 100%;
+    height: auto;
     border-radius: 20px;
+    object-fit: cover;
+    display: block;
 }
-.socialMedia h4{
-    color:#73ac28 !important;
+
+/* Social Section */
+.socialMedia h4 {
+    color: #73ac28 !important;
 }
-.text h3{
+
+.text h3 {
     color: #808080;
     font-size: 20px;
+    line-height: 1.6;
 }
-.socialIovns span{
+
+.socialIovns {
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.socialIovns span {
     width: 60px;
     height: 60px;
     padding: 15px;
-    background-color:#83CD20 !important;
+    background-color: #83CD20 !important;
     border-radius: 50%;
     color: #fff;
     font-size: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 60px;
 }
 
-.teamText{
+/* Team Section */
+.teamText {
     color: #034833;
     font-weight: 700;
-  
+    line-height: 1.3;
 }
 
-.leftArrow,.RightArrow {
+.teamText img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.leftArrow,
+.RightArrow {
+    width: 44px;
+    height: 44px;
     padding: 10px;
-        background-color: #83CD20;
-        border-radius: 50%;
-        color: #fff;
+    background-color: #83CD20;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.leftArrow i:hover {
-cursor: pointer;
 
-}
+.leftArrow i:hover,
 .RightArrow i:hover {
     cursor: pointer;
-
 }
 
+.cardPhoto {
+    align-items: center;
+    text-align: center;
+}
 
-.cardPhoto{
-   align-items: center;
+.cardPhoto img {
+    border-radius: 20px;
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
 }
-.cardPhoto img{
-   border-radius: 20px;
- 
-  
-}
-.cardContainerr{
+
+.cardContainerr {
     background-color: #fff;
     padding: 30px;
     border-radius: 15px;
     min-height: 550px;
     width: 330px;
+    max-width: 100%;
 }
-.cardContainerr:hover{
+
+.cardContainerr:hover {
     border: 1px solid #83CD20;
 }
-.cardsSections{
+
+.cardsSections {
     background-color: #F1F5EB;
     padding: 80px;
     border-radius: 40px;
-   
+    overflow: hidden;
 }
-.green-text{
+
+.green-text {
     color: #034833;
     font-weight: 700;
-white-space: nowrap;
-    
+    white-space: nowrap;
+    font-size: clamp(18px, 2vw, 24px);
+}
 
-}
-.iconsInfo span{
-    width: 40px;
-        height: 40px;
-        padding: 13px;
-        background-color: #83CD20 !important;
-        border-radius: 50%;
-        color: #fff;
-        font-size: 19px;
-}
-.center-class{
+.iconsInfo {
     display: flex;
     justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.iconsInfo span {
+    width: 40px;
+    height: 40px;
+    padding: 13px;
+    background-color: #83CD20 !important;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 19px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 40px;
+}
+
+.center-class {
+    display: flex;
+    justify-content: center;
+}
+
+.cardContainer {
+    box-shadow: 0 18px 45px rgba(3, 72, 51, 0.06);
+}
+
+.About-us-Header .aboutUs-subHeader {
+    line-height: 1.25;
+}
+
+.SocialMeaiaPhoto img,
+.nabatatiLogo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.alert {
+    margin-top: 18px;
+    border-radius: 16px;
+}
+
+/* Large tablets and small laptops */
+@media (max-width: 1199.98px) {
+    .ContactUsBanner img {
+        max-height: 360px;
+    }
+
+    .photoContactContainer {
+        max-width: 720px;
+    }
+
+    .photoContactContainer img {
+        max-height: 520px;
+    }
+
+    form {
+        max-width: 760px;
+        margin: 0 auto;
+    }
+
+    .cardsSections {
+        padding: 60px 35px;
+        border-radius: 32px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 991.98px) {
+    .ContactUsBanner img {
+        border-radius: 20px;
+    }
+
+    .About-us-Header .aboutUs-subHeader.fs-2 {
+        font-size: 1.65rem !important;
+    }
+
+    .socialMedia {
+        text-align: center;
+    }
+
+    .SocialMeaiaPhoto img {
+        max-width: 560px;
+        width: 100%;
+    }
+
+    .cardContainerr {
+        min-height: 520px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+    .ContactUsBanner {
+        margin-top: 16px;
+    }
+
+    .ContactUsBanner img {
+        min-height: 170px;
+        max-height: 240px;
+        object-fit: cover;
+        border-radius: 18px;
+    }
+
+    .ContactInfo {
+        margin-top: 1.5rem !important;
+    }
+
+    .photoContactContainer {
+        margin-top: 1rem !important;
+    }
+
+    .photoContactContainer img {
+        max-height: 380px;
+    }
+
+    form {
+        padding: 22px 16px;
+        border-radius: 18px;
+    }
+
+    input {
+        width: 100%;
+        padding: 13px 14px;
+        border-radius: 22px;
+        font-size: 14px;
+    }
+
+    .textbox {
+        padding-bottom: 95px;
+    }
+
+    .About-us-Subject {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .About-us-Header .aboutUs-subHeader.fs-2 {
+        font-size: 1.35rem !important;
+    }
+
+    .About-us-Header .aboutUs-subHeader img {
+        width: 34px;
+        height: 34px;
+        object-fit: contain;
+        margin-bottom: 0.75rem !important;
+    }
+
+    .socialIovns {
+        padding-inline: 8px;
+        justify-content: center;
+    }
+
+    .socialIovns span {
+        margin: 0 !important;
+        width: 52px;
+        height: 52px;
+        flex-basis: 52px;
+        font-size: 20px;
+    }
+
+    .cardsSections {
+        padding: 42px 16px;
+        border-radius: 28px 28px 0 0;
+    }
+
+    .teamText {
+        font-size: 1.25rem;
+        white-space: normal;
+    }
+
+    .teamText img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .leftArrow,
+    .RightArrow {
+        width: 38px;
+        height: 38px;
+        padding: 8px;
+    }
+
+    .RightArrow.ms-4 {
+        margin-left: 0.65rem !important;
+    }
+
+    .cardContainerr {
+        width: 100%;
+        max-width: 360px;
+        min-height: auto;
+        padding: 22px;
+    }
+
+    .cardPhoto img {
+        max-height: 290px;
+    }
+
+    .green-text {
+        white-space: normal;
+        text-align: center;
+    }
+
+    .textInfo {
+        text-align: center;
+    }
+
+    .iconsInfo span {
+        margin: 0 !important;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 575.98px) {
+    .container.fontAmste,
+    .container.fontAmster {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+    }
+
+    .ContactUsBanner img {
+        min-height: 145px;
+    }
+
+    .photoContactContainer img {
+        max-height: 310px;
+    }
+
+    form {
+        padding: 18px 14px;
+    }
+
+    .btn.fs-5 {
+        font-size: 1rem !important;
+    }
+
+    .nabatatiLogo img {
+        max-width: 220px;
+    }
+
+    .text h3 {
+        font-size: 17px;
+    }
+
+    .SocialMeaiaPhoto img {
+        max-width: 330px;
+    }
+
+    .cardsSections {
+        padding: 35px 12px;
+    }
+
+    .cardContainerr {
+        max-width: 330px;
+        padding: 18px;
+    }
+
+    .cardPhoto img {
+        max-height: 250px;
+    }
 }

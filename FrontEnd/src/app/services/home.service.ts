@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class HomeService {
   //ربطنا api home page 
-  private apiUrl = 'http://127.0.0.1:8000/'; // api home page from backend
+ private apiUrl = 'https://api.nabatati.it.com/'; // api home page from backend
 
   constructor(private http: HttpClient) { }
 

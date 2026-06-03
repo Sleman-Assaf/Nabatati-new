@@ -13,7 +13,7 @@ export class WebsocketService {
   }
 
   connect(): void {
-    this.socket = io('http://localhost:4000'); // استخدم الرابط المناسب عند النشر
+   this.socket = io('https://chat.nabatati.it.com'); // رابط الشات عند النشر
   }
 
   register(token: string): void {

@@ -31,10 +31,10 @@ export class LiveChatComponent implements OnInit, OnDestroy {
   private socketSub!: Subscription;
 
   engineerNames: { [id: string]: string } = {
-    '17': 'Dr. Saleh Al-Shdiefat',
-    '18': 'Feras Harahsheh',
-    '19': 'Eng. Yousef Al-Kawaleet',
-    '20': 'Sharif Al-Rawashdeh',
+    '3': 'Dr. Saleh Al-Shdiefat',
+    '5': 'Feras Harahsheh',
+    '6': 'Eng. Yousef Al-Kawaleet',
+    '7': 'Sharif Al-Rawashdeh',
   };
 
   constructor(

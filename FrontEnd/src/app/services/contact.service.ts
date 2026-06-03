@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ContactService {
 
-  private apiUrl = 'http://127.0.0.1:8000/api/contact/';
+  private apiUrl = 'https://api.nabatati.it.com/api/contact/';
 
   constructor(private http: HttpClient) {}
 

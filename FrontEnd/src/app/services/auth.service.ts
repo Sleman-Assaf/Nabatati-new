@@ -6,9 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:8000/api/register/'; //عنوان التسجيل
-  private loginUrl = 'http://localhost:8000/api/login/'; //عنوان تسجيل الدخول
-    private engineerRegisterUrl = 'http://127.0.0.1:8000/api/register/engineer/'; //تسجيل المهندسين
+ private apiUrl = 'https://api.nabatati.it.com/api/register/'; // عنوان التسجيل
+private loginUrl = 'https://api.nabatati.it.com/api/login/'; // عنوان تسجيل الدخول
+private engineerRegisterUrl = 'https://api.nabatati.it.com/api/register/engineer/'; // تسجيل المهندسين
 
   
   

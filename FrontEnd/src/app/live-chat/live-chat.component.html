@@ -1,19 +1,20 @@
 <app-navbar></app-navbar>
 
-
 <div class="chat-page py-4 d-flex align-items-center">
-  <div class="container">
+  <div class="container-fluid container-lg px-3 px-md-4">
     <div class="chat-layout">
 
       <!-- Left Side Card -->
-      <div class="chat-side-card">
+      <div class="chat-side-card d-none d-lg-block">
         <div class="side-card-inner">
           <div class="side-top">
             <img src="profile.png" alt="Engineer" class="side-profile-img" />
-            <h3>{{ engineerName }}</h3>
-            <p class="specialist">Plant Disease Specialist</p>
 
-            
+            <h3>{{ engineerName }}</h3>
+
+            <p class="specialist">
+              Plant Disease Specialist
+            </p>
           </div>
 
           <div class="side-info">
@@ -34,7 +35,9 @@
               </ul>
             </div>
 
-            <a class="expert-list-btn" href="#Expert_Talk">View Expert List →</a>
+            <a class="expert-list-btn" href="#Expert_Talk">
+              View Expert List →
+            </a>
           </div>
         </div>
       </div>
@@ -42,10 +45,8 @@
       <!-- Chat -->
       <div class="chat-wrapper">
 
-      
-
         <!-- Mobile top button -->
-        <div class="mobile-expert-bar">
+        <div class="mobile-expert-bar d-lg-none">
           <a href="#Expert_Talk" class="mobile-expert-btn">
             <img src="profile.png" alt="Engineer">
             <span>{{ engineerName }}</span>
@@ -60,7 +61,7 @@
             </div>
 
             <div class="expert-text">
-              <h3>{{ engineerName }} </h3>
+              <h3>{{ engineerName }}</h3>
               <p>Plant Disease Specialist</p>
             </div>
           </div>
@@ -68,8 +69,6 @@
 
         <!-- Messages -->
         <div class="chat-body hightChat">
-
-       
 
           <div
             class="message-row"
@@ -116,8 +115,5 @@
     </div>
   </div>
 </div>
-
-
-
 
 <app-footer></app-footer>

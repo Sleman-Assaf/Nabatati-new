@@ -1,198 +1,266 @@
-  * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
 
-  body {
-      height: 100%;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #f4f4f4;
-  }
+body {
+    margin: 0;
+    background-color: #f4f4f4;
+}
 
+/* Main Background */
 .background-container {
-      display: flex;
-      width: 100%;
-      height: 100vh;
-      background-image: url('/login.png');
-      background-size: 100% 100% ;
-      background-position: center ;
-      background-repeat: no-repeat;
-      background-color: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(25px);
-  }
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('/login.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow-x: hidden;
+}
 
-  .login-section {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding: 20px;
-      flex: 1;
-  }
+/* Login Wrapper */
+.login-section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 40px 20px;
+    flex: 1;
+}
 
-  .login-container {
-      background-color: rgba(255, 255, 255, 0.4);
-      -webkit-backdrop-filter: blur(1px);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      padding: 40px;
-      width: 100%;
-      max-width: 450px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      margin-right: 170px;
-  }
+/* Login Card */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-right: 170px;
+}
 
-  .welcome-header {
-      display: flex;
-      align-items: baseline;
-      margin-bottom: 10px;
-  }
+/* Header */
+.welcome-header {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
 
-  .welcome-header h3 {
-      font-weight: normal;
-      color: #333;
-      font-size: 16px;
-      margin-right: 6px;
-  }
+.welcome-header h3 {
+    font-weight: normal;
+    color: #333;
+    font-size: 16px;
+    margin-right: 6px;
+}
 
-  .brand-name {
-      color: #7bc043;
-      font-weight: 500;
-      font-size: 16px;
-  }
-
-  .signin-header {
-      font-size: 38px;
-      font-weight: bold;
-      color: #111;
-      margin-bottom: 25px;
-  }
-
-  .social-login {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 25px;
-  }
-
-  .social-login button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: none;
-      border-radius: 8px;
-      padding: 12px 15px;
-      font-size: 14px;
-      font-weight: 500;
-      cursor: pointer;
-      background-color: #eef5ff;
-      flex-grow: 1;
-  }
-
-  .google-btn {
-      color: #4285F4;
-  }
-
-  .facebook-btn {
-      color: #1877F2;
-  }
-
-  .google-icon {
-      margin-right: 8px;
-  }
-
-  .facebook-btn svg {
-      margin-right: 8px;
-  }
-
-  .form-group {
-      margin-bottom: 20px;
-  }
-
-  .form-label {
-      display: block;
-      margin-bottom: 10px;
-      color: #333;
-      font-weight: 500;
-      font-size: 14px;
-  }
-
-  .form-control {
-      width: 100%;
-      padding: 15px;
-      border: 1px solid #e0e0e0;
-      border-radius: 10px;
-      font-size: 14px;
-  }
-
-  .form-control:focus {
-      outline: none;
-      border-color: #7bc043;
-  }
-
-  .forgot-password {
-      text-align: right;
-      margin-top: 8px;
-  }
-
-  .forgot-password a {
-      color: #4285F4;
-      text-decoration: none;
-      font-size: 14px;
-  }
-
-  .account-prompt {
-      display: flex;
-      justify-content: space-between;
-      margin: 25px 0;
-  }
-
-  .account-prompt p {
-      color: #666;
-      font-size: 14px;
-  }
-
-  .signup-link {
-      color: #7bc043;
-      font-weight: 500;
-      text-decoration: none;
-  }
-
-  .signin-btn {
-      width: 100%;
-      background-color: #709b2c;
-      color: white;
-      border: none;
-      border-radius: 30px;
-      padding: 15px;
-      font-size: 16px;
-      font-weight: 500;
-      cursor: pointer;
-  }
-
-  .signin-btn:hover {
-      background-color: #6aad39;
-  }
-
-  @media (max-width: 768px) {
-      .background-container {
-          flex-direction: column;
-      }
-
-      .login-section {
-          flex: 1;
-      }
-  }
-  .welcome-header img {
+.welcome-header img {
     width: 160px;
-  }
-  .clickForgetPassord :hover{
-cursor:pointer !important;
-  }
+    max-width: 100%;
+}
 
-  .UserChat {
-    
-  }
+.brand-name {
+    color: #7bc043;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.signin-header {
+    font-size: 38px;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 25px;
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #7bc043;
+    box-shadow: none;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-top: 8px;
+}
+
+.forgot-password a {
+    color: #4285F4;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.clickForgetPassord div:hover {
+    cursor: pointer !important;
+    color: #709b2c;
+}
+
+.account-prompt {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+}
+
+.account-prompt p {
+    color: #666;
+    font-size: 14px;
+}
+
+.signup-link {
+    color: #7bc043;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* Button */
+.signin-btn {
+    width: 100%;
+    background-color: #709b2c;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.signin-btn:hover {
+    background-color: #6aad39;
+}
+
+/* Alerts */
+.alert {
+    border-radius: 14px;
+    font-size: 14px;
+}
+
+/* Tablet */
+@media (max-width: 1199px) {
+    .login-container {
+        margin-right: 60px;
+    }
+}
+
+/* Small Laptop / Tablet */
+@media (max-width: 991px) {
+    .background-container {
+        min-height: 100vh;
+        background-position: center;
+    }
+
+    .login-section {
+        justify-content: center;
+        padding: 50px 24px;
+    }
+
+    .login-container {
+        margin-right: 0;
+        max-width: 460px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .background-container {
+        min-height: 100vh;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .login-section {
+        justify-content: center;
+        align-items: center;
+        padding: 40px 18px;
+    }
+
+    .login-container {
+        max-width: 100%;
+        padding: 30px 22px;
+        border-radius: 18px;
+        margin-right: 0;
+    }
+
+    .signin-header {
+        font-size: 32px;
+        margin-bottom: 22px;
+    }
+
+    .welcome-header h3 {
+        font-size: 15px;
+    }
+
+    .welcome-header img {
+        width: 135px;
+    }
+
+    .form-control {
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    .signin-btn {
+        padding: 14px;
+        font-size: 15px;
+    }
+}
+
+/* Very Small Mobile */
+@media (max-width: 480px) {
+    .login-section {
+        padding: 32px 14px;
+    }
+
+    .login-container {
+        padding: 26px 18px;
+        border-radius: 16px;
+    }
+
+    .signin-header {
+        font-size: 28px;
+    }
+
+    .welcome-header {
+        align-items: center;
+    }
+
+    .welcome-header img {
+        width: 120px;
+    }
+
+    .forgot-password {
+        text-align: left;
+    }
+
+    .alert {
+        font-size: 13px;
+        padding: 10px;
+    }
+}

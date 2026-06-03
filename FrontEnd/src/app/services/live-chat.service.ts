@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ChatService {
-  private BASE_URL = 'http://localhost:4000/api';
+private BASE_URL = 'https://chat.nabatati.it.com/api';
 
   constructor(private http: HttpClient) {}
 

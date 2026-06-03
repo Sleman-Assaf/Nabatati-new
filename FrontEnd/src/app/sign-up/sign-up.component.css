@@ -5,43 +5,56 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 }
 
+html,
 body {
-   
-    
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
+body {
+    margin: 0;
+}
+
+/* Main Section */
 .signup-section {
     background-image: url('/login.png');
-        background-size: 100% 100%;
-        background-position: center center;
-        background-repeat: no-repeat;
-        height: 100%;
-      
-    
-        flex-direction: row-reverse;
-    flex: 1;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    min-height: 100vh;
+
     display: flex;
-   
-    padding: 20px;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    padding: 40px clamp(20px, 8vw, 170px) 40px 20px;
 }
 
+/* Signup Card */
 .signup-container {
     background-color: rgba(255, 255, 255, 0.4);
     -webkit-backdrop-filter: blur(1px);
     backdrop-filter: blur(10px);
+
     border-radius: 20px;
     padding: 40px;
+
     width: 100%;
     max-width: 450px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    margin-right: 170px;
 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-right: 0;
 }
 
+/* Header */
 .welcome-header {
     display: flex;
     align-items: baseline;
     margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 
 .welcome-header h3 {
@@ -58,12 +71,21 @@ body {
 }
 
 .signup-header {
-    font-size: 38px;
+    font-size: clamp(30px, 4vw, 38px);
     font-weight: bold;
     color: #111;
     margin-bottom: 25px;
+    line-height: 1.15;
 }
 
+/* Logo */
+.nabatatiLogo img {
+    width: 160px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Form */
 .form-group {
     margin-bottom: 20px;
 }
@@ -82,139 +104,268 @@ body {
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     font-size: 14px;
+    background-color: #fff;
 }
 
 .form-control:focus {
     outline: none;
     border-color: #7bc043;
+    box-shadow: 0 0 0 0.2rem rgba(123, 192, 67, 0.18);
 }
 
+/* If you use row / col inside signup */
 .row {
     display: flex;
     gap: 15px;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .col {
-    flex: 1;
+    flex: 1 1 0;
+    min-width: 0;
 }
 
+/* Hints and Errors */
+.form-hint {
+    color: #747474;
+    line-height: 1.6;
+}
+
+small {
+    color: #a00e0e;
+    font-size: 0.85rem;
+    margin-top: 4px;
+    display: block;
+}
+
+/* Account Prompt */
 .account-prompt {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 12px;
     margin: 25px 0;
+    flex-wrap: wrap;
 }
 
 .account-prompt p {
     color: #666;
     font-size: 14px;
+    margin-bottom: 0;
 }
 
-.signin-link {
-    color: #709b2c;
+.signin-link,
+.account-prompt a {
+    color: #709b2c !important;
     font-weight: 500;
     text-decoration: none;
     margin-left: 5px;
 }
 
+.signin-link:hover,
+.account-prompt a:hover {
+    color: #6aad39 !important;
+}
+
+/* Button */
 .signup-btn {
     width: 100%;
     background-color: #709b2c;
     color: white;
+
     border: none;
     border-radius: 30px;
+
     padding: 15px;
     font-size: 16px;
     font-weight: 500;
+
     cursor: pointer;
     margin-top: 10px;
+    transition: 0.25s ease;
 }
 
 .signup-btn:hover {
     background-color: #6aad39;
+    transform: translateY(-1px);
 }
 
-.nabatatiLogo img{
-    width: 160px;
+/* Social Login */
+.social-login {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
 }
 
+.social-login button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 12px 15px;
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+    background-color: #eef5ff;
+
+    flex: 1 1 160px;
+}
+
+.google-btn {
+    color: #4285F4;
+}
+
+.facebook-btn {
+    color: #1877F2;
+}
+
+.google-icon {
+    margin-right: 8px;
+}
+
+.facebook-btn svg {
+    margin-right: 8px;
+}
+
+/* Modal */
+.modal-content {
+    padding: 25px;
+    border-radius: 25px;
+}
+
+.modal-dialog {
+    margin: auto !important;
+    padding: 15px;
+}
+
+/* Large tablets and small laptops */
+@media (max-width: 1199px) {
+    .signup-section {
+        padding-right: 60px;
+        padding-left: 20px;
+        background-position: center center;
+    }
+
+    .signup-container {
+        max-width: 430px;
+        padding: 34px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 991px) {
+    .signup-section {
+        justify-content: center;
+        padding: 60px 24px;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .signup-container {
+        max-width: 520px;
+        margin: 0 auto;
+    }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
-    body {
+    .signup-section {
+        min-height: auto;
+        padding: 45px 16px;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .signup-container {
+        padding: 28px 20px;
+        border-radius: 18px;
+        max-width: 100%;
+        background-color: rgba(255, 255, 255, 0.62);
+    }
+
+    .welcome-header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .welcome-header h3 {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .signup-header {
+        text-align: center;
+        margin-bottom: 22px;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .col {
+        width: 100%;
+    }
+
+    .account-prompt {
+        justify-content: center;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .social-login {
         flex-direction: column;
     }
 
-    .signup-section {
-        flex: 1;
+    .social-login button {
+        width: 100%;
+        flex-basis: auto;
     }
 }
- .social-login {
-     display: flex;
-     gap: 10px;
-     margin-bottom: 25px;
- }
 
- .social-login button {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     border: none;
-     border-radius: 8px;
-     padding: 12px 15px;
-     font-size: 14px;
-     font-weight: 500;
-     cursor: pointer;
-     background-color: #eef5ff;
-     flex-grow: 1;
- }
+/* Small Mobile */
+@media (max-width: 480px) {
+    .signup-section {
+        padding: 32px 12px;
+    }
 
- .google-btn {
-     color: #4285F4;
- }
+    .signup-container {
+        padding: 24px 16px;
+        border-radius: 16px;
+    }
 
- .facebook-btn {
-     color: #1877F2;
- }
+    .nabatatiLogo img {
+        width: 135px;
+    }
 
- .google-icon {
-     margin-right: 8px;
- }
+    .signup-header {
+        font-size: 28px;
+    }
 
- .facebook-btn svg {
-     margin-right: 8px;
- }
+    .form-control {
+        padding: 13px 14px;
+        font-size: 13px;
+    }
 
- .form-group {
-     margin-bottom: 20px;
- }
- .form-hint {
-    color: #747474;
- }
- small{
-    color: #a00e0e;
-        font-size: 0.85rem;
-        margin-top: 4px;
-        display: block;
- }
- .modal-content{
-    padding: 25px;
-    border-radius: 25px;
- }
- .modal-dialog{
-    margin: auto !important;
- }
- .account-prompt {
-     display: flex;
-     justify-content: space-between;
-     margin: 25px 0;
- }
+    .form-label,
+    .account-prompt p {
+        font-size: 13px;
+    }
 
- .account-prompt p {
-     color: #666;
-     font-size: 14px;
- }.account-prompt a{
-    text-decoration: none;
-    color: #709b2c !important;
- }
+    small {
+        font-size: 0.78rem;
+    }
 
-
-
+    .modal-content {
+        padding: 18px;
+        border-radius: 18px;
+    }
+}

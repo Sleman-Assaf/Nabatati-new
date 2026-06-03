@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ModelServ {
-  private apiUrl = 'http://127.0.0.1:8000/api/ai_model/diagnose/'; // api تبع الموديل
+ private apiUrl = 'https://api.nabatati.it.com/api/ai_model/diagnose/'; // api تبع الموديل
 
   constructor(private http: HttpClient) { }
 
@@ -27,7 +27,7 @@ export class ModelServ {
   
     // لاحظ الرابط بدون userId أو //
     return this.http.get<{ results: any[] }>(
-      'http://127.0.0.1:8000/api/ai_model/diagnoses/',
+      'https://api.nabatati.it.com/api/ai_model/diagnose/',
       { headers }
     );
   }

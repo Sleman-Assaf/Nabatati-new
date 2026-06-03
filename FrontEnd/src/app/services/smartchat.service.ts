@@ -6,12 +6,11 @@ import { Injectable } from '@angular/core';
 })
 export class ChatAiService {
 
-  private apiUrl = 'http://127.0.0.1:8000/ask/'; // ؤابط api 
-
+private apiUrl = 'https://api.nabatati.it.com/ask/'; // رابط api
   constructor(private http: HttpClient) {}
 
 sendMessage(question: string) {
-  return this.http.post<any>('http://127.0.0.1:8000/ask/', {
+  return this.http.post<any>('https://api.nabatati.it.com/ask/', {
     question: question // 
   });
 }
