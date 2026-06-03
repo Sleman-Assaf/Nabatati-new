@@ -1,0 +1,46 @@
+.degree {
+    color: #4b7f52;
+    margin-bottom: 8px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.experience-item,
+.education-item {
+    padding: 18px 0;
+    border-bottom: 1px solid #e8f5e9;
+}
+
+.experience-item:last-child,
+.education-item:last-child {
+    border-bottom: none;
+}
+
+.award-icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    background-color: #e8f5e9;
+    border-radius: 50%;
+    color: #2e7d32;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+.award-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f7f0;
+}
+
+.award-item:last-child {
+    border-bottom: none;
+}
+
+.company {
+    color: #4b7f52;
+    font-weight: 500;
+}

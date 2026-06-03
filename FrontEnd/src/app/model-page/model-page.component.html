@@ -194,10 +194,10 @@
           <p>Your recent leaf analysis results</p>
         </div>
 
-        <button class="view-all-btn">View All →</button>
+       
       </div>
 
-      <div class="result-card" *ngFor="let item of userResults">
+      <div class="result-card d-flex justify-content-between" *ngFor="let item of userResults">
         <div class="result-image">
           <img [src]="item.image_file" alt="Diagnosis Image">
         </div>
@@ -244,9 +244,7 @@
           </span>
         </div>
 
-        <div class="result-action">
-          <button>→</button>
-        </div>
+      
       </div>
     </section>
 
